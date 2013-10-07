@@ -4,7 +4,7 @@
 	<title>Impact Game</title>
 	<style type="text/css">
 		html,body {
-			background-color: black;
+			background-color: grey;
 			color: #fff;
 			font-family: helvetica, arial, sans-serif;
 			margin: 0;
@@ -28,23 +28,22 @@
 
 	<script type="text/javascript" src="lib/impact/impact.js"></script>
 	<script type="text/javascript" src="lib/game/main.js"></script>
+
+	<script type="text/javascript" src="lib/game/Controllers/Players.js"></script>
+	<script type="text/javascript" src="lib/game/Controllers/Screen.js" ></script>
 </head>
 <body>
-	<center>
-		<p color="white">ARROWS - navigate clones</p>
-		<p color="white">Q - respawn clones</p>
-		<p color="white">C - check in</p>
-	</center>
+	
 	<canvas id="canvas"></canvas>
 	<script>
 	setInterval(function(){
-	if( innerHeight < innerWidth ){
-		document.querySelector("canvas").style.height = "80%"
-		document.querySelector("canvas").style.width  = ""
-	}else{
-		document.querySelector("canvas").style.width  = "80%"
-		document.querySelector("canvas").style.height = ""
-	}
+		if( innerHeight < innerWidth ){
+			document.querySelector("canvas").style.height = "80%"
+			document.querySelector("canvas").style.width  = ""
+		}else{
+			document.querySelector("canvas").style.width  = "80%"
+			document.querySelector("canvas").style.height = ""
+		}
 	},10)
 	</script>
 </body>
